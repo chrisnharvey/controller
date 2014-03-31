@@ -14,8 +14,8 @@
         "encorephp/view": "dev-master"
     },
     "autoload": {
-        "psr-0": {
-            "": "src/"
+        "psr-4": {
+            "Encore\\Controller\\": "src/"
         }
     },
     "minimum-stability": "dev"
