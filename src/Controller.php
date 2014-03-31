@@ -3,9 +3,13 @@
 namespace Encore\Controller;
 
 use Encore\View\View;
+use Encore\Container\ContainerAwareTrait;
+use Encore\Container\ContainerAwareInterface;
 
-abstract class Controller
+abstract class Controller implements ContainerAwareInterface
 {
+    use ContainerAwareTrait;
+
     protected $view;
 
     public function setupView()
