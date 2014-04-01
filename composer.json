@@ -14,7 +14,7 @@
         "encorephp/view": "dev-master"
     },
     "replace": {
-        "encorephp/view": "self.version"
+        "encorephp/controller": "self.version"
     },
     "autoload": {
         "psr-4": {
