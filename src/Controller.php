@@ -16,8 +16,8 @@ abstract class Controller implements ContainerAwareInterface
     {
         if ( ! isset($this->view)) return;
 
-        $view = $this->container['view']->make($this->view)
-            ->setController($this);
+        $view = $this->container['view']->make($this->view);
+        $view->setController($this);
 
         $this->view = $view;
     }
