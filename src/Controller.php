@@ -27,6 +27,11 @@ abstract class Controller implements ContainerAwareInterface, \ArrayAccess
         return $this->view->$property;
     }
 
+    public function __set($property, $value)
+    {
+        $this->view->$property = $value;
+    }
+
     /**
      * Determine if a given offset exists.
      *
