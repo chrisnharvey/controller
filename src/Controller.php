@@ -11,12 +11,13 @@ abstract class Controller implements ContainerAwareInterface, \ArrayAccess
     use ContainerAwareTrait;
 
     protected $view;
+    protected $style = null;
 
     public function setupView()
     {
         if ( ! isset($this->view)) return;
 
-        $view = $this->container['view']->make($this->view);
+        $view = $this->container['view']->make($this->view, $this->style);
         $view->setController($this);
 
         $this->view = $view;
